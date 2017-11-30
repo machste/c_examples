@@ -1,3 +1,7 @@
 *.o
+*.gcno
+*.gcda
+*.gcov
+*.cov
 encode64
 decode64

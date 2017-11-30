@@ -10,4 +10,4 @@ $(PROGS): %: %.c $(OBJECTS)
 
 .PHONY: clean
 clean:
-	rm -rf *.o $(PROGS)
+	rm -rf $(PROGS) *.o *.gcno *.gcda *.gcov
