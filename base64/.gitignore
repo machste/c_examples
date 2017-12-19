@@ -3,5 +3,6 @@
 *.gcda
 *.gcov
 *.cov
+.cdeps
 encode64
 decode64
