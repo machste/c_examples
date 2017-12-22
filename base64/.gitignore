@@ -1,4 +1,5 @@
 *.o
+*.log
 *.gcno
 *.gcda
 *.gcov
@@ -6,3 +7,4 @@
 .cdeps
 encode64
 decode64
+tests/base64_test
