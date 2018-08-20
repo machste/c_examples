@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         if (i < argc - 1) in[in_pos++] = ' ';
     }
     in[in_pos] = '\0';
-    printf("Input: %s\n", in);
+    printf("Input: '%s'\n", in);
     if (plugins->count == 0) {
         fprintf(stderr, "No plugins found!\n");
         ret = EXIT_FAILURE;
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
             char *out = malloc(out_size);
             plugin->filter_cb(in, out, out_size);
             // Write out to standard out
-            printf("Output(%s): %s\n", plugin->name, out);
+            printf("Output(%s): '%s'\n", plugin->name, out);
             free(out);
         } else {
             fprintf(stderr, "Filter '%s' failed!\n", plugin->name);
