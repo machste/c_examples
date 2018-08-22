@@ -1,5 +1,5 @@
 PROGS = fruitgame
-CFLAGS = -Werror
+CFLAGS = -std=c99 -Werror
 
 all: $(PROGS)
 

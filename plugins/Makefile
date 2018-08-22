@@ -1,6 +1,6 @@
 SUBDIRS = plugins
 
-export CFLAGS = -Wall -Werror -g
+export CFLAGS = -std=c99 -Wall -Werror -g
 
 all: convert $(SUBDIRS)
 

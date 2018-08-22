@@ -5,7 +5,7 @@ APPS = encode64 decode64
 SRCS = base64.c
 
 # Define compiler flags here
-CFLAGS = -g -O0 -Werror
+CFLAGS = -std=c99 -g -O0 -Werror
 
 # External packages
 PKGS = glib-2.0
