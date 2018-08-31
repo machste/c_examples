@@ -145,6 +145,7 @@ void teardown_decoding(base64_fixture *fixture, gconstpointer _data)
 int main(int argc, char *argv[])
 {
     g_test_init(&argc, &argv, NULL);
+    g_test_set_nonfatal_assertions();
     g_test_add("/set1/encoding test", base64_fixture, &TEST_DATA,
             setup_encoding, test_encoding, teardown_encoding);
     g_test_add("/set1/decoding test", base64_fixture, &TEST_DATA,
