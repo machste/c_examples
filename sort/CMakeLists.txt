@@ -8,8 +8,9 @@ project(sort VERSION 1.0.0)
 
 include(GNUInstallDirs)
 
-set(CMAKE_C_FLAGS "-O0 -g -std=gnu99 -Wall -Werror")
+set(CMAKE_C_FLAGS "-O0 -g -Wall -Werror")
 
 add_executable(${PROJECT_NAME} sort.c)
 target_link_libraries(${PROJECT_NAME} ${MASC_LIBRARIES})
 target_include_directories(${PROJECT_NAME} PUBLIC ${MASC_INCLUDE_DIRS})
+target_compile_options(${PROJECT_NAME} PUBLIC ${MASC_CFLAGS_OTHER})
