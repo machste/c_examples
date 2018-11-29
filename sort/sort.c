@@ -12,11 +12,11 @@ int main(int argc, char *argv[])
     Map *args = argparse_parse(ap, argc, argv);
     File *f = map_get(args, "file");
     // Read all lines in
-    List *lines = file_readlines(f);
+    List *lines = readlines(f);
     list_sort(lines, cmp);
     // Reopen file and write the sorted lines
     if(file_reopen(f, "w")) {
-        file_writelines(f, lines);
+        writelines(f, lines);
     } else {
         fprint(stderr, "File '%s': %s!\n", file_path(f), file_err_msg(f));
         ret = -1;
